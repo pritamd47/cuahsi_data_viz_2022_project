@@ -1,6 +1,7 @@
 # user defined ignore patterns
 .DS_Store
 .condaenv/
+results/
 
 # from https://github.com/github/gitignore/blob/main/Python.gitignore
 # Byte-compiled / optimized / DLL files
