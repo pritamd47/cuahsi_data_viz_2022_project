@@ -1,0 +1,139 @@
+S3A.2.1                    : Data Processing Version ID
+101979 Nuozhadu            : Target database id number and name
+ 22.750 100.310            : Latitude and longitude (degrees East) of target mid-point
+ 22.858  22.625            : Latitude range of pass traversing target at which data is accepted
+350     175                : Satellite pass and revolution number designation
+         24                : Reference pass derived from Sen-3A cycle #
+          1                : Reference pass tracker mode (ocean=0, ice1=1)
+  N/A                      : N/A Bias
+  N/A                      : N/A Bias
+  N/A                      : N/A Bias
+c                                                                                         
+c   Mean target height along the Reference Profile:                                       
+c     (i.e. geodetic height wrt Topex ellipsoid)                                          
+c     mean  = 772.56 m  std  = 0.09 m                                                     
+c                                                                                         
+c                                                                                         
+c   Shift from Topex ellipsoid to WGS84 ellipsoid:                                        
+c     mean  = 0.70 m                                                                      
+c                                                                                         
+c                                                                                         
+c   Geoid height along the Reference Profile:                                             
+c     EGM96    mean  = -38.09 m  std  = 0.08 m                                            
+c     EGM2008  mean  = -38.50 m  std  = 0.06 m                                            
+c     EIGEN6C4 mean  = -38.30 m  std  = 0.06 m                                            
+c                                                                                         
+c                                                                                         
+c   !! CONVERSION FACTORS !!                                                              
+c     (to shift from satellite product datum to an orthometric/mean sea level datum)      
+c     (ADD this value to each elevation in the target product)                            
+c     EGM96     = 809.95 m  std  = 0.12 m                                                 
+c     EGM2008   = 810.36 m  std  = 0.11 m                                                 
+c     EIGEN6C4  = 810.16 m  std  = 0.10 m                                                 
+c                                                                                         
+Column 1: Satellite mission name
+Column 2: Satellite repeat cycle
+Column 3: Calendar year/month/day of along track observations traversing target
+Column 4: Hour of day at mid point of along track pass traversing target
+Column 5: Minutes of hour at mid point of along track pass traversing target
+Column 6: Target height variation with respect to Sen-3A reference pass mean level (meters, default=999.99)
+Column 7: Estimated error of target height variation with respect to reference mean level (meters, default=99.999)
+Column 8: Mean along track Ku-band backscatter coefficient (decibels, default=999.99)
+Column 9: Wet tropospheric correction applied to range observation (RAD=Sen-3A radiometer, ECM=ECMWF Operational model, MIX=combination, U/A=unavailable, N/A=not applicable)
+Column 10: Ionosphere correction applied to range observation (GIM=GPS model, U/A=unavailable, N/A=not applicable)
+Column 11: Dry tropospheric correction applied to range observation (ECM=ECMWF Operational model, U/A=unavailable, N/A=not applicable)
+Column 12: Instrument operating mode 1 (default=9)
+Column 13: Instrument operating mode 2 (default=9)
+Column 14: Flag for potential frozen surface (ice-on=1, ice-off or unknown=0)
+Column 15: Target height variation in EGM2008 datum (meters above mean sea level, default=9999.99)
+Column 16: Flag for Sen-3A data source (NTC-R=0, NTC=1, STC=2)
+S3A     1 99999999  99 99  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   0
+S3A     2 20160325   3 33  -23.31  0.060  12.34 ECM GIM ECM 9 9 0   787.05   0
+S3A     3 20160421   3 33  -32.28  0.072  25.12 ECM GIM ECM 9 9 0   778.08   0
+S3A     4 20160518   3 33  -38.17  0.071  23.46 ECM GIM ECM 9 9 0   772.19   0
+S3A     5 20160614   3 33  -37.93  0.055  22.55 ECM GIM ECM 9 9 0   772.43   0
+S3A     6 20160711   3 33  -33.39  0.056  25.66 ECM GIM ECM 9 9 0   776.97   0
+S3A     7 20160807   3 33  -19.29  0.095  27.33 ECM GIM ECM 9 9 0   791.07   0
+S3A     8 20160903   3 33  -10.05  0.160  24.29 ECM GIM ECM 9 9 0   800.31   0
+S3A     9 20160930   3 33   -3.79  0.045  35.63 ECM GIM ECM 9 9 0   806.57   0
+S3A    10 20161027   3 33    1.40  0.050  21.98 ECM GIM ECM 9 9 0   811.76   0
+S3A    11 20161123   3 33    1.54  0.086  31.17 ECM GIM ECM 9 9 0   811.90   0
+S3A    12 20161220   3 33   -0.75  0.052  25.51 ECM GIM ECM 9 9 0   809.61   0
+S3A    13 20170116   3 33   -1.05  0.128  21.30 ECM GIM ECM 9 9 0   809.31   0
+S3A    14 20170212   3 33   -3.47  0.103  25.16 ECM GIM ECM 9 9 0   806.89   0
+S3A    15 20170311   3 33  -11.17  0.043  32.50 ECM GIM ECM 9 9 0   799.19   0
+S3A    16 20170407   3 33  -21.08  0.115  23.91 ECM GIM ECM 9 9 0   789.28   0
+S3A    17 20170504   3 33  -28.68  0.158  19.35 ECM GIM ECM 9 9 0   781.68   0
+S3A    18 20170531   3 33  -37.18  0.059  29.15 ECM GIM ECM 9 9 0   773.18   0
+S3A    19 20170627   3 33  -39.17  0.234  17.97 ECM GIM ECM 9 9 0   771.19   0
+S3A    20 20170724   3 33  -33.03  0.048  22.05 ECM GIM ECM 9 9 0   777.33   0
+S3A    21 20170820   3 33  -25.30  0.048  32.98 ECM GIM ECM 9 9 0   785.06   0
+S3A    22 20170916   3 33   -8.11  0.097  22.44 ECM GIM ECM 9 9 0   802.25   0
+S3A    23 20171013   3 33   -2.32  0.049  24.43 ECM GIM ECM 9 9 0   808.04   0
+S3A    24 20171109   3 33    0.00  0.042  32.80 ECM GIM ECM 9 9 0   810.36   0
+S3A    25 20171206   3 33   -5.90  0.068  29.24 ECM GIM ECM 9 9 0   804.46   0
+S3A    26 20180102   3 33   -8.25  0.049  34.30 ECM GIM ECM 9 9 0   802.11   0
+S3A    27 20180129   3 33  -10.15  0.094  31.67 ECM GIM ECM 9 9 0   800.21   0
+S3A    28 20180225   3 33  -12.06  0.048  32.50 ECM GIM ECM 9 9 0   798.30   0
+S3A    29 20180324   3 33  -12.22  0.057  20.36 ECM GIM ECM 9 9 0   798.14   0
+S3A    30 20180420   3 33  -16.32  0.060  18.02 ECM GIM ECM 9 9 0   794.04   1
+S3A    31 20180517   3 33  -34.43  0.055  16.58 ECM GIM ECM 9 9 0   775.93   1
+S3A    32 20180613   3 33  -44.59  0.051  19.95 ECM GIM ECM 9 9 0   765.77   1
+S3A    33 20180710   3 33  -42.95  0.045  27.55 ECM GIM ECM 9 9 0   767.41   1
+S3A    34 20180806   3 33  -33.54  0.046  28.95 ECM GIM ECM 9 9 0   776.82   1
+S3A    35 20180902   3 33  -16.22  0.046  30.90 ECM GIM ECM 9 9 0   794.14   1
+S3A    36 20180929   3 33   -3.56  0.059  27.68 ECM GIM ECM 9 9 0   806.80   1
+S3A    37 20181026   3 33    1.23  0.071  34.97 ECM GIM ECM 9 9 0   811.59   1
+S3A    38 20181122   3 33    1.19  0.103  30.53 ECM GIM ECM 9 9 0   811.55   1
+S3A    39 20181219   3 33    1.19  0.065  29.16 ECM GIM ECM 9 9 0   811.55   1
+S3A    40 20190115   3 33   -1.68  0.067  21.89 ECM GIM ECM 9 9 0   808.68   1
+S3A    41 20190211   3 33    0.16  0.054  32.54 ECM GIM ECM 9 9 0   810.52   1
+S3A    42 20190310   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    43 20190406   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    44 20190503   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    45 20190530   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    46 20190626   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    47 20190723   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    48 20190819   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    49 20190915   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    50 20191012   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    51 20191108   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    52 20191205   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    53 20200101   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    54 20200128   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    55 20200224   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    56 20200322   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    57 20200418   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    58 20200515   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    59 20200611   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    60 20200708   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    61 20200804   3 33  999.99 99.999 999.99 N/A N/A N/A 9 9 0  9999.99   1
+S3A    62 20200831   3 33  -19.45  0.050  30.86 ECM GIM ECM 9 9 0   790.91   1
+S3A    63 20200927   3 33  -11.26  0.060  23.00 ECM GIM ECM 9 9 0   799.10   1
+S3A    64 20201024   3 33   -2.22  0.057  31.46 ECM GIM ECM 9 9 0   808.14   1
+S3A    65 20201120   3 33    1.14  0.057  32.57 ECM GIM ECM 9 9 0   811.50   1
+S3A    66 20201217   3 33   -1.02  0.085  23.48 ECM GIM ECM 9 9 0   809.34   1
+S3A    67 20210113   3 33   -3.38  0.050  35.99 ECM GIM ECM 9 9 0   806.98   1
+S3A    68 20210209   3 33   -2.86  0.055  31.79 ECM GIM ECM 9 9 0   807.50   1
+S3A    69 20210308   3 33   -5.52  0.046  28.51 ECM GIM ECM 9 9 0   804.84   1
+S3A    70 20210404   3 33   -9.25  0.067  25.59 ECM GIM ECM 9 9 0   801.11   1
+S3A    71 20210501   3 33  -17.17  0.051  34.55 ECM GIM ECM 9 9 0   793.19   1
+S3A    72 20210528   3 33  -28.97  0.075  26.06 ECM GIM ECM 9 9 0   781.39   1
+S3A    73 20210624   3 33  -33.01  0.045  32.03 ECM GIM ECM 9 9 0   777.35   1
+S3A    74 20210721   3 33  -33.50  0.049  28.92 ECM GIM ECM 9 9 0   776.86   1
+S3A    75 20210817   3 33  -28.96  0.063  25.50 ECM GIM ECM 9 9 0   781.40   1
+S3A    76 20210913   3 33  -20.55  0.066  26.01 ECM GIM ECM 9 9 0   789.81   1
+S3A    77 20211010   3 33  -12.44  0.061  27.65 ECM GIM ECM 9 9 0   797.92   1
+S3A    78 20211106   3 33  -11.65  0.199  17.26 ECM GIM ECM 9 9 0   798.71   1
+S3A    79 20211203   3 33   -9.46  0.047  22.45 ECM GIM ECM 9 9 0   800.90   1
+S3A    80 20211230   3 33  -11.90  0.114  20.65 ECM GIM ECM 9 9 0   798.46   1
+S3A    81 20220126   3 33  -10.07  0.058  32.11 ECM GIM ECM 9 9 0   800.29   1
+S3A    82 20220222   3 33   -9.77  0.054  26.31 ECM GIM ECM 9 9 0   800.59   1
+S3A    83 20220321   3 33  -16.05  0.074  27.07 ECM GIM ECM 9 9 0   794.31   1
+S3A    84 20220417   3 33  -18.01  0.068  26.75 ECM GIM ECM 9 9 0   792.35   1
+S3A    85 20220514   3 33  -23.60  0.081  19.68 ECM GIM ECM 9 9 0   786.76   1
+S3A    86 20220610   3 33  -24.45  0.050  27.49 ECM GIM ECM 9 9 0   785.91   1
+S3A    87 20220707   3 33  -21.16  0.046  19.82 ECM GIM ECM 9 9 0   789.20   1
+S3A    88 20220803   3 33  -23.10  0.053  30.96 ECM GIM ECM 9 9 0   787.26   1
+S3A    89 20220830   3 33  -16.35  0.064  26.99 ECM GIM ECM 9 9 0   794.01   1
+S3A    90 20220926   3 33  -14.60  0.078  19.00 ECM GIM ECM 9 9 0   795.76   2
