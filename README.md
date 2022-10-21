@@ -43,7 +43,6 @@ The data used in this project correspond to 36 reservoirs in the Mekong basin, f
     - Does the variability relate to the country of the reservoir? This may indicate that different countries operate their reservoirs differently.
 - How well does the TMS-OS algorithm perform in estimating surface areas?
     - How do the raw optical & SAR, cloud corrected optical (after applying [Zhao and Gao, (2018)](https://doi.org/10.1029/2018GL078343)), and TMS-OS derived surface area estimates compare? - with each other, and with other sources of surface area/water level of reservoir (like [G-REALM](https://ipad.fas.usda.gov/cropexplorer/global_reservoir/)).
-- To explore other relationships that might exist between directly connected reservoirs - is there a relationship between surface areas of upstream and their corresponding downstream reservoirs?
 
 # Other datasets that can be used in conjunction to answer the questions above
 - [GRAND Database](globaldamwatch.org/grand/): Contains additional metadata for most of the reservoirs that can be used for annotations/further analysis.
